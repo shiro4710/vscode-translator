@@ -10,7 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onCommand:vscode-translator.translate"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -21,6 +21,7 @@
       }
     ]
   },
+  "repository": "git@github.com:shiro4710/vscode-translator.git",
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
