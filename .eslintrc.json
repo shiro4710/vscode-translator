@@ -10,12 +10,15 @@
     ],
     "extends":["prettier"],
     "rules": {
+        "eqeqeq": "error",
+        "handle-callback-err": "warn",
+        "eol-last": ["error","always"],
+        "sort-imports": 0,
         "@typescript-eslint/naming-convention": "warn",
         "@typescript-eslint/semi": "warn",
         "curly": "warn",
-        "eqeqeq": "warn",
         "no-throw-literal": "warn",
-        "semi": "off"
+        "semi": "error"
     },
     "ignorePatterns": [
         "out",

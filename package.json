@@ -10,14 +10,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-translator.helloWorld"
+    "*"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-translator.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-translator.translate",
+        "title": "Translate"
       }
     ]
   },
@@ -29,7 +29,7 @@
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
+    "lint": "eslint src --ext ts && prettier --write src/",
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
@@ -46,9 +46,7 @@
     "ts-loader": "^9.3.1",
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0"
-  },
-  "dependencies": {
+    "webpack-cli": "^4.10.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1"
   }
